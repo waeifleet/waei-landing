@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Terms of Service — Waei</title>
+<meta name="description" content="Terms of Service for Waei Fleet. Plain-English terms for our pilot program.">
+<meta name="theme-color" content="#185FA5">
+
+<style>
+  *,*::before,*::after { box-sizing: border-box; }
+  html,body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #ffffff;
+    color: #042C53;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: 1.65;
+  }
+  a { color: #185FA5; }
+
+  /* NAV */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #E8E6DE;
+    padding: 14px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-mark {
+    width: 32px; height: 32px;
+    background: #185FA5; color: #fff;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 7px; font-weight: 500; font-size: 15px;
+  }
+  .nav-name { font-size: 16px; font-weight: 500; color: #042C53; }
+  .nav-links { display: flex; align-items: center; gap: 8px; }
+  .nav-link {
+    padding: 8px 14px; font-size: 14px; text-decoration: none;
+    color: #5F5E5A; border-radius: 6px; transition: color .15s, background .15s;
+  }
+  .nav-link:hover { color: #185FA5; background: #F4F2EC; }
+  .nav-cta {
+    padding: 8px 16px; font-size: 14px; text-decoration: none;
+    background: #185FA5; color: #fff; border-radius: 6px;
+  }
+  .nav-cta:hover { background: #0C447C; }
+
+  /* DOCUMENT */
+  .doc-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 24px 80px;
+  }
+  .doc-head {
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #E8E6DE;
+  }
+  .doc-title {
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 500;
+    color: #042C53;
+    margin: 0 0 12px;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+  .doc-meta {
+    font-size: 13px;
+    color: #888780;
+    line-height: 1.6;
+  }
+  .doc-lead {
+    font-size: 16px;
+    color: #5F5E5A;
+    margin: 20px 0 0;
+    line-height: 1.7;
+  }
+  .doc-lead strong { color: #042C53; font-weight: 500; }
+
+  h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #042C53;
+    margin: 40px 0 16px;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+  h2 .num {
+    color: #185FA5;
+    font-weight: 500;
+    margin-right: 10px;
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #042C53;
+    margin: 24px 0 10px;
+  }
+  p {
+    font-size: 15px;
+    color: #042C53;
+    margin: 0 0 14px;
+    line-height: 1.7;
+  }
+  ul {
+    margin: 0 0 14px;
+    padding-left: 22px;
+  }
+  ul li {
+    font-size: 15px;
+    color: #042C53;
+    margin-bottom: 6px;
+    line-height: 1.65;
+  }
+  strong { font-weight: 500; color: #042C53; }
+  em { font-style: italic; color: #5F5E5A; }
+  code {
+    font-family: SFMono-Regular, Consolas, monospace;
+    font-size: 13px;
+    background: #F4F2EC;
+    padding: 1px 5px;
+    border-radius: 3px;
+    color: #042C53;
+  }
+  .callout {
+    background: #F8F6F0;
+    border-left: 3px solid #185FA5;
+    padding: 16px 18px;
+    margin: 20px 0;
+    border-radius: 4px;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout p { font-size: 14px; color: #5F5E5A; }
+
+  /* FOOTER */
+  .footer {
+    padding: 32px 24px 28px;
+    border-top: 1px solid #E8E6DE;
+    text-align: center;
+    color: #888780;
+    font-size: 13px;
+  }
+  .footer a { color: #888780; text-decoration: none; margin: 0 10px; }
+  .footer a:hover { color: #185FA5; }
+  .footer-copy {
+    margin-top: 12px;
+    color: #B4B2A9;
+    font-size: 12px;
+  }
+
+  @media (max-width: 768px) {
+    .nav { padding: 12px 16px; }
+    .nav-link { padding: 6px 10px; font-size: 13px; }
+    .nav-cta { padding: 7px 14px; font-size: 13px; }
+    .doc-wrap { padding: 40px 20px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-brand">
+    <span class="nav-mark">W</span>
+    <span class="nav-name">Waei</span>
+  </a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Home</a>
+    <a href="/pricing.html" class="nav-link">Pricing</a>
+    <a href="https://app.waei.ae" class="nav-cta">Customer login</a>
+  </div>
+</nav>
+
+<main class="doc-wrap">
+
+  <header class="doc-head">
+    <h1 class="doc-title">Terms of Service</h1>
+    <div class="doc-meta">
+      Last updated: 24 May 2026<br>
+      Applies to: anyone using the Waei Fleet platform at app.waei.ae
+    </div>
+    <p class="doc-lead">
+      These Terms describe what you can expect from <strong>Waei</strong>, what we expect from you, and how we work together. We've written them in plain English. If anything is unclear, email <a href="mailto:hello@waei.ae">hello@waei.ae</a> and we'll explain.
+    </p>
+  </header>
+
+  <div class="callout">
+    <p><strong>About these Terms.</strong> Waei is currently operated as an independent service while we work with our first wave of UAE fleet customers (our "Pilot Program"). Formal company incorporation is planned as the business grows. These Terms will be updated as the business formalizes, and existing customers will be notified of material changes.</p>
+  </div>
+
+  <h2><span class="num">1.</span>The basics</h2>
+
+  <p><strong>"Waei"</strong> (or "we", "us") refers to the Waei Fleet platform and the team operating it. <strong>"You"</strong> (or "Customer") refers to the business or person using the service.</p>
+
+  <p>By creating an account or being added to a fleet on Waei, you agree to these Terms. If you don't agree, please don't use the service.</p>
+
+  <p>Waei is a fleet maintenance management platform. It helps you track vehicles, repairs, defects, drivers, costs, and compliance for a fleet you operate. We're not a fleet operator ourselves — we're a tool you use.</p>
+
+  <h2><span class="num">2.</span>Who can use Waei</h2>
+
+  <p>Waei is built for UAE-based small and medium fleet operators. You may use it if:</p>
+  <ul>
+    <li>You are at least 18 years old, or representing a registered business</li>
+    <li>You have legal authority to manage the vehicles and data you enter</li>
+    <li>You use Waei in compliance with UAE law and applicable regulations</li>
+  </ul>
+
+  <p>You're responsible for the people you add to your fleet account (managers, supervisors, mechanics). Their actions are treated as your actions for the purposes of these Terms.</p>
+
+  <h2><span class="num">3.</span>The Pilot Program</h2>
+
+  <p>During the Pilot Program, Waei is provided <strong>free of charge for the first three months</strong> from your account activation date. Pilot terms:</p>
+  <ul>
+    <li>No payment is required to start or use Waei during the Pilot period</li>
+    <li>You get full access to all features, with no artificial limits on vehicles, repairs, or users</li>
+    <li>You can cancel at any time and export your data</li>
+    <li>We may end the Pilot Program at our discretion with reasonable notice (typically 30 days)</li>
+    <li>After the Pilot, we'll discuss pricing with you based on your fleet size and usage. There is no obligation to continue.</li>
+  </ul>
+
+  <p>If you decide not to continue after the Pilot, you'll have at least 90 days to export your data before your account is closed.</p>
+
+  <h2><span class="num">4.</span>Your account and security</h2>
+
+  <p>Each user logs into Waei with their personal email address. You're responsible for keeping your email account secure, since access to that email allows access to Waei.</p>
+
+  <p>If you're a manager, you control who else can access your fleet. Add team members through the Admin → Team page. Revoke their access when they leave your organization. We can't restore data accessed by an authorized team member you haven't yet revoked.</p>
+
+  <p>Tell us at <a href="mailto:hello@waei.ae">hello@waei.ae</a> if you suspect someone is accessing your account without permission.</p>
+
+  <h2><span class="num">5.</span>Your data is yours</h2>
+
+  <p><strong>You own all the data you enter into Waei.</strong> Vehicles, repairs, invoices, photos, drivers, costs — all of it.</p>
+
+  <p>We process this data only to provide the service to you. Specifically, we use it to:</p>
+  <ul>
+    <li>Display it back to you and your authorized team members</li>
+    <li>Run features you've activated (such as AI invoice scanning, compliance alerts, reports)</li>
+    <li>Diagnose and fix problems you report</li>
+    <li>Improve Waei in aggregate, anonymized ways (see Privacy Policy)</li>
+  </ul>
+
+  <p>We do not sell your data. We do not share it with advertisers. We do not use it to train AI models without your specific consent. See our <a href="/privacy.html">Privacy Policy</a> for details on how we handle your data.</p>
+
+  <p>You can export your data from Waei at any time. If your account is closed, you can request an export of all your data within 90 days of closure.</p>
+
+  <h2><span class="num">6.</span>What we provide</h2>
+
+  <p>We work to keep Waei available, reliable, and useful. Specifically:</p>
+  <ul>
+    <li>We aim for high uptime, but cannot guarantee 100% — occasional brief outages are normal for cloud software</li>
+    <li>We back up your data daily and can typically restore from the past 7 days</li>
+    <li>We respond to support requests sent to <a href="mailto:hello@waei.ae">hello@waei.ae</a> within one working day during the Pilot, faster as we add paid plans</li>
+    <li>We release updates and improvements regularly. Most are seamless; major changes will be communicated in advance.</li>
+  </ul>
+
+  <p>Waei is provided "as is" during the Pilot Program. We don't make formal SLA guarantees during this stage — but we do care, and we want it to work for you. If something's broken, tell us and we'll fix it.</p>
+
+  <h2><span class="num">7.</span>What you can't do</h2>
+
+  <p>You agree not to use Waei to:</p>
+  <ul>
+    <li>Store data you don't have the right to store</li>
+    <li>Violate UAE law or the privacy of others</li>
+    <li>Attempt to access another fleet's data, reverse-engineer the platform, or circumvent security</li>
+    <li>Resell access to Waei without our written consent</li>
+    <li>Upload malicious content, viruses, or anything intended to harm other users or the platform</li>
+  </ul>
+
+  <p>If we believe you're using Waei in violation of these Terms, we may suspend or terminate your access. We'll try to give you notice and a chance to resolve the issue first, unless the situation requires immediate action (e.g. ongoing security threat).</p>
+
+  <h2><span class="num">8.</span>AI features and third-party services</h2>
+
+  <p>Waei uses AI for features like invoice scanning. When you upload an invoice, the content is processed by an AI provider to extract structured data (vendor, amounts, line items).</p>
+
+  <p>Waei relies on third-party infrastructure providers for database hosting, authentication, web delivery, and AI processing. These providers operate under contractual terms that require them to protect your data and process it only on our behalf. We choose providers with strong security practices and well-established reputations in the cloud industry.</p>
+
+  <p>For details on what data goes where, see the <a href="/privacy.html">Privacy Policy</a>.</p>
+
+  <h2><span class="num">9.</span>Payment, billing, and price changes</h2>
+
+  <p>During the Pilot Program, there is no payment.</p>
+
+  <p>When the Pilot ends and you decide to continue:</p>
+  <ul>
+    <li>We'll agree on pricing together, in writing (email is fine)</li>
+    <li>Billing details, payment method, and frequency will be confirmed before any charge</li>
+    <li>You can cancel anytime — we don't lock you in</li>
+    <li>Price changes for ongoing customers will be announced at least 30 days in advance</li>
+  </ul>
+
+  <p>UAE Value Added Tax (VAT) may apply once we are VAT-registered. Pricing will be communicated as exclusive or inclusive of VAT at the time.</p>
+
+  <h2><span class="num">10.</span>If something goes wrong</h2>
+
+  <p>Software sometimes has bugs. Cloud services sometimes have outages. We take both seriously and work to minimize them.</p>
+
+  <p>To the maximum extent permitted by UAE law:</p>
+  <ul>
+    <li>Waei is provided without warranties of any kind, express or implied</li>
+    <li>We're not liable for indirect, incidental, or consequential damages (e.g. lost profits from a delayed repair report)</li>
+    <li>Our total liability to you is limited to the amount you paid us in the previous 12 months (for Pilot customers, this means our liability is limited because you've paid nothing — but we'll still work to make things right where we can)</li>
+  </ul>
+
+  <p>These limitations don't apply to anything that can't legally be limited under UAE law.</p>
+
+  <h2><span class="num">11.</span>Ending the relationship</h2>
+
+  <p>You can stop using Waei at any time. Email us at <a href="mailto:hello@waei.ae">hello@waei.ae</a> and we'll close your account and help you export your data.</p>
+
+  <p>We can also terminate your access if:</p>
+  <ul>
+    <li>You materially breach these Terms and don't fix it within a reasonable time after we ask</li>
+    <li>We're required to by law</li>
+    <li>You haven't logged in for an extended period and we've been unable to reach you (typically 12 months)</li>
+  </ul>
+
+  <p>If we terminate the service entirely (e.g. discontinue Waei), we'll give you at least 60 days' notice and help you export your data.</p>
+
+  <h2><span class="num">12.</span>Changes to these Terms</h2>
+
+  <p>We may update these Terms occasionally — for instance, when we incorporate, add paid plans, or refine our practices.</p>
+
+  <p>For non-trivial changes, we'll let you know by email at least 30 days before they take effect. Continued use after that date means you accept the new Terms. If you don't accept, you can close your account before the changes apply, with full data export.</p>
+
+  <h2><span class="num">13.</span>Governing law</h2>
+
+  <p>These Terms are governed by the laws of the United Arab Emirates. Any disputes that can't be resolved by talking to us will be subject to the exclusive jurisdiction of the courts of Dubai, UAE.</p>
+
+  <h2><span class="num">14.</span>Contact us</h2>
+
+  <p>Questions, concerns, feedback — anything — please reach out:</p>
+  <ul>
+    <li>Email: <a href="mailto:hello@waei.ae">hello@waei.ae</a></li>
+    <li>We respond within one working day, usually faster</li>
+  </ul>
+
+</main>
+
+<footer class="footer">
+  <a href="/">Home</a>
+  <a href="/pricing.html">Pricing</a>
+  <a href="/terms.html">Terms</a>
+  <a href="/privacy.html">Privacy</a>
+  <a href="https://app.waei.ae">Customer login</a>
+  <a href="mailto:hello@waei.ae">hello@waei.ae</a>
+  <div class="footer-copy">Waei.ae · © 2026</div>
+</footer>
+
+</body>
+</html>
