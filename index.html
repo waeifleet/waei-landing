@@ -75,6 +75,28 @@
     max-width: 480px;
     line-height: 1.6;
   }
+  .pilot-banner {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: #E6F1FB;
+    color: #185FA5;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    transition: background .15s;
+  }
+  .pilot-banner:hover { background: #D2E5F8; }
+  .pilot-banner::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #185FA5;
+  }
   .cta-row {
     display: flex;
     gap: 12px;
@@ -142,6 +164,8 @@
       <span>Waei</span>
     </div>
 
+    <a href="/pricing.html" class="pilot-banner">Pilot program open — 3 months free →</a>
+
     <h1>Fleet maintenance, simplified.</h1>
 
     <p class="lede">
@@ -150,7 +174,7 @@
 
     <div class="cta-row">
       <a href="https://app.waei.ae" class="btn btn-primary">Customer login →</a>
-      <a href="mailto:hello@waei.ae?subject=Waei%20Fleet%20%E2%80%94%20Pilot%20request" class="btn btn-secondary">Request a pilot</a>
+      <a href="/pricing.html" class="btn btn-secondary">Pricing &amp; pilot</a>
     </div>
 
     <div class="meta">

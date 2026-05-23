@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pilot Program — Waei Fleet</title>
+<meta name="description" content="Waei pilot program for UAE small fleets: three months free, full product access, no card required.">
+<meta name="theme-color" content="#185FA5">
+
+<meta property="og:title" content="Waei Pilot Program — Three months free.">
+<meta property="og:description" content="Built for UAE small fleets. Full Waei access for 90 days, no card, no commitment.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://waei.ae/pricing.html">
+
+<style>
+  *,*::before,*::after { box-sizing: border-box; }
+  html,body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #ffffff;
+    color: #042C53;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: 1.5;
+  }
+  a { color: inherit; }
+
+  /* ── NAV ─────────────────────────────────────────────────── */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #E8E6DE;
+    padding: 14px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-mark {
+    width: 32px; height: 32px;
+    background: #185FA5; color: #fff;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 7px; font-weight: 500; font-size: 15px;
+  }
+  .nav-name { font-size: 16px; font-weight: 500; color: #042C53; }
+  .nav-links { display: flex; align-items: center; gap: 8px; }
+  .nav-link {
+    padding: 8px 14px; font-size: 14px; text-decoration: none;
+    color: #5F5E5A; border-radius: 6px; transition: color .15s, background .15s;
+  }
+  .nav-link:hover { color: #185FA5; background: #F4F2EC; }
+  .nav-link.active { color: #185FA5; font-weight: 500; }
+  .nav-cta {
+    padding: 8px 16px; font-size: 14px; text-decoration: none;
+    background: #185FA5; color: #fff; border-radius: 6px;
+    transition: background .15s;
+  }
+  .nav-cta:hover { background: #0C447C; }
+
+  /* ── CONTAINER ───────────────────────────────────────────── */
+  .container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ── HERO ────────────────────────────────────────────────── */
+  .hero {
+    padding: 80px 24px 56px;
+    text-align: center;
+  }
+  .hero-badge {
+    display: inline-block;
+    padding: 5px 14px;
+    background: #E6F1FB;
+    color: #185FA5;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 500;
+    color: #042C53;
+    margin: 0 0 16px;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  .hero h1 em { color: #185FA5; font-style: normal; font-weight: 500; }
+  .hero-sub {
+    font-size: clamp(15px, 2vw, 18px);
+    color: #5F5E5A;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* ── PLAN CARD ──────────────────────────────────────────── */
+  .plan-section {
+    padding: 0 24px 56px;
+  }
+  .plan-card {
+    max-width: 640px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #B5D4F4;
+    border-radius: 14px;
+    padding: 40px 36px;
+    box-shadow: 0 1px 2px rgba(4, 44, 83, 0.04), 0 8px 24px rgba(24, 95, 165, 0.06);
+    position: relative;
+    overflow: hidden;
+  }
+  .plan-card::before {
+    content: "";
+    position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: #185FA5;
+  }
+  .plan-eyebrow {
+    font-size: 12px;
+    font-weight: 500;
+    color: #185FA5;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .plan-name {
+    font-size: 28px;
+    font-weight: 500;
+    color: #042C53;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .plan-tagline {
+    font-size: 14px;
+    color: #5F5E5A;
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+  .plan-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+  }
+  .plan-price {
+    font-size: 44px;
+    font-weight: 500;
+    color: #042C53;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .plan-period {
+    font-size: 14px;
+    color: #888780;
+  }
+  .plan-price-note {
+    font-size: 13px;
+    color: #888780;
+    margin-bottom: 28px;
+  }
+  .plan-divider {
+    height: 1px;
+    background: #E8E6DE;
+    margin: 24px 0;
+  }
+  .plan-include-label {
+    font-size: 12px;
+    color: #888780;
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .plan-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px;
+  }
+  .plan-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 7px 0;
+    color: #042C53;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .plan-list li::before {
+    content: "";
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #E6F1FB;
+    margin-top: 3px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23185FA5' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .plan-cta-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    padding: 13px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: transform .08s ease, background .15s ease, border-color .15s ease;
+    text-align: center;
+  }
+  .btn:active { transform: scale(0.98); }
+  .btn-primary {
+    background: #185FA5;
+    color: #ffffff;
+    border: 1px solid #185FA5;
+    flex: 1;
+    min-width: 200px;
+  }
+  .btn-primary:hover { background: #0C447C; border-color: #0C447C; }
+  .btn-secondary {
+    background: #ffffff;
+    color: #185FA5;
+    border: 1px solid #B5D4F4;
+    flex: 1;
+    min-width: 160px;
+  }
+  .btn-secondary:hover { background: #E6F1FB; border-color: #185FA5; }
+
+  /* ── HOW IT WORKS ───────────────────────────────────────── */
+  .section {
+    padding: 64px 24px;
+  }
+  .section-head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 40px;
+  }
+  .section-eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #185FA5;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .section-title {
+    font-size: clamp(24px, 4vw, 32px);
+    font-weight: 500;
+    color: #042C53;
+    margin: 0 0 10px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .section-title em { color: #185FA5; font-style: normal; font-weight: 500; }
+  .section-sub {
+    font-size: 15px;
+    color: #5F5E5A;
+    line-height: 1.6;
+  }
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .step {
+    background: #F8F6F0;
+    border: 1px solid #E8E6DE;
+    border-radius: 10px;
+    padding: 22px 18px;
+  }
+  .step-num {
+    font-size: 12px;
+    font-weight: 500;
+    color: #185FA5;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+  }
+  .step-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #042C53;
+    margin: 0 0 6px;
+  }
+  .step-desc {
+    font-size: 13px;
+    color: #5F5E5A;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* ── FEATURES ───────────────────────────────────────────── */
+  .feat-section {
+    background: #F8F6F0;
+  }
+  .feat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  .feat-card {
+    background: #ffffff;
+    border: 1px solid #E8E6DE;
+    border-radius: 10px;
+    padding: 22px 20px;
+    transition: border-color .15s, transform .12s;
+  }
+  .feat-card:hover {
+    border-color: #B5D4F4;
+    transform: translateY(-2px);
+  }
+  .feat-emoji {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .feat-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #042C53;
+    margin: 0 0 5px;
+  }
+  .feat-desc {
+    font-size: 13px;
+    color: #5F5E5A;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* ── FAQ ────────────────────────────────────────────────── */
+  .faq-list {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .faq-item {
+    border-bottom: 1px solid #E8E6DE;
+    padding: 18px 0;
+  }
+  .faq-item:first-child {
+    border-top: 1px solid #E8E6DE;
+  }
+  .faq-q {
+    font-size: 16px;
+    font-weight: 500;
+    color: #042C53;
+    margin: 0 0 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .faq-q::before {
+    content: "Q.";
+    color: #185FA5;
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+  .faq-a {
+    font-size: 14px;
+    color: #5F5E5A;
+    line-height: 1.6;
+    padding-left: 24px;
+    margin: 0;
+  }
+
+  /* ── BOTTOM CTA ─────────────────────────────────────────── */
+  .cta-section {
+    padding: 64px 24px;
+    text-align: center;
+  }
+  .cta-title {
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 500;
+    color: #042C53;
+    margin: 0 0 12px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .cta-title em { color: #185FA5; font-style: normal; font-weight: 500; }
+  .cta-sub {
+    font-size: 15px;
+    color: #5F5E5A;
+    max-width: 480px;
+    margin: 0 auto 28px;
+    line-height: 1.6;
+  }
+  .cta-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .cta-row .btn { flex: 0 0 auto; }
+
+  /* ── FOOTER ─────────────────────────────────────────────── */
+  .footer {
+    padding: 32px 24px 28px;
+    border-top: 1px solid #E8E6DE;
+    text-align: center;
+    color: #888780;
+    font-size: 13px;
+  }
+  .footer a {
+    color: #888780;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  .footer a:hover { color: #185FA5; }
+  .footer-copy {
+    margin-top: 12px;
+    color: #B4B2A9;
+    font-size: 12px;
+  }
+
+  /* ── RESPONSIVE ─────────────────────────────────────────── */
+  @media (max-width: 768px) {
+    .nav { padding: 12px 16px; }
+    .nav-link { padding: 6px 10px; font-size: 13px; }
+    .nav-cta { padding: 7px 14px; font-size: 13px; }
+    .hero { padding: 56px 20px 40px; }
+    .plan-card { padding: 32px 24px; }
+    .plan-price { font-size: 36px; }
+    .section { padding: 48px 20px; }
+    .steps-grid { grid-template-columns: 1fr 1fr; }
+    .feat-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 480px) {
+    .steps-grid, .feat-grid { grid-template-columns: 1fr; }
+    .btn-primary, .btn-secondary { width: 100%; flex: 0 0 100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="/" class="nav-brand">
+    <span class="nav-mark">W</span>
+    <span class="nav-name">Waei</span>
+  </a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Home</a>
+    <a href="/pricing.html" class="nav-link active">Pricing</a>
+    <a href="https://app.waei.ae" class="nav-cta">Customer login</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-badge">Limited early access</div>
+  <h1>Three months <em>free</em>. Then you decide.</h1>
+  <p class="hero-sub">
+    Waei is in early access with UAE fleet operators. Join the pilot program and get the full product — no card, no commitment — while we tune it with you.
+  </p>
+</header>
+
+<!-- PLAN CARD -->
+<section class="plan-section">
+  <div class="plan-card">
+    <div class="plan-eyebrow">Pilot Program</div>
+    <h2 class="plan-name">Free for 3 months</h2>
+    <p class="plan-tagline">
+      For the first wave of UAE fleet operators using Waei. The full product, full access, no payment. We'll talk pricing in month four — together.
+    </p>
+
+    <div class="plan-price-row">
+      <div class="plan-price">AED 0</div>
+      <div class="plan-period">for 90 days</div>
+    </div>
+    <div class="plan-price-note">No credit card · No commitment · Cancel anytime</div>
+
+    <div class="plan-divider"></div>
+
+    <div class="plan-include-label">What's included</div>
+    <ul class="plan-list">
+      <li>Full access to the Waei platform — every feature, no limits</li>
+      <li>Unlimited vehicles, repairs, defects, drivers, vendors</li>
+      <li>AI invoice scanning (Arabic + English) on every uploaded invoice</li>
+      <li>Manager, supervisor, and mechanic roles with email login</li>
+      <li>Compliance alerts (registration, insurance, MOT renewal)</li>
+      <li>Preventive maintenance scheduling and tracking</li>
+      <li>1-on-1 onboarding call with the team that built Waei</li>
+      <li>Export your data any time — it's always yours</li>
+    </ul>
+
+    <div class="plan-cta-row">
+      <a href="mailto:hello@waei.ae?subject=Waei%20Fleet%20%E2%80%94%20Pilot%20request&body=Hi%20Waei%20team%2C%0A%0AI%27d%20like%20to%20join%20the%20pilot%20program.%20Here%27s%20about%20our%20fleet%3A%0A%0AFleet%20size%20(approx.%20number%20of%20vehicles)%3A%20%0AType%20of%20vehicles%20(trucks%2C%20vans%2C%20cars)%3A%20%0AContact%20name%3A%20%0AContact%20phone%3A%20%0A%0AThanks!" class="btn btn-primary">Request a pilot →</a>
+      <a href="https://app.waei.ae" class="btn btn-secondary">Try the app</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <div class="section-head">
+    <div class="section-eyebrow">How it works</div>
+    <h2 class="section-title">From email to <em>up and running</em> — in a day.</h2>
+    <p class="section-sub">No procurement process, no setup fee, no IT department needed. Real onboarding is a 30-minute call.</p>
+  </div>
+  <div class="steps-grid">
+    <div class="step">
+      <div class="step-num">STEP 01</div>
+      <h3 class="step-title">Email us</h3>
+      <p class="step-desc">Tell us about your fleet — size, type, where you operate. We'll reply within one working day.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">STEP 02</div>
+      <h3 class="step-title">30-minute call</h3>
+      <p class="step-desc">We learn your workflow, show you the product, answer questions. No slides, no pressure.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">STEP 03</div>
+      <h3 class="step-title">We set you up</h3>
+      <p class="step-desc">Your fleet, your team logins, your vehicles — ready to use. We handle the data import.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">STEP 04</div>
+      <h3 class="step-title">Use it for free</h3>
+      <p class="step-desc">90 days, full access. We check in monthly. Month 4 we talk pricing together.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section feat-section">
+  <div class="section-head">
+    <div class="section-eyebrow">What you get</div>
+    <h2 class="section-title">Built for <em>UAE SME fleets</em>.</h2>
+    <p class="section-sub">Not the bloated enterprise software your competitors don't actually use. Real tools for the workshop.</p>
+  </div>
+  <div class="feat-grid">
+    <div class="feat-card">
+      <div class="feat-emoji">🔧</div>
+      <h3 class="feat-title">Repair tracking</h3>
+      <p class="feat-desc">Every job, every part, every cost. Photos of the work. Vendor records. Paid/unpaid status. No more lost paperwork.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-emoji">📄</div>
+      <h3 class="feat-title">AI invoice scanning</h3>
+      <p class="feat-desc">Snap a photo of any invoice — Arabic or English. We extract vendor, amount, line items, VAT. No typing.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-emoji">🚨</div>
+      <h3 class="feat-title">Defect reporting</h3>
+      <p class="feat-desc">Mechanics report directly from their phone. Supervisors triage. Managers see open issues at a glance.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-emoji">📅</div>
+      <h3 class="feat-title">Preventive maintenance</h3>
+      <p class="feat-desc">Set service intervals by km or date. Get alerts before a missed service costs you a breakdown.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-emoji">📋</div>
+      <h3 class="feat-title">Compliance alerts</h3>
+      <p class="feat-desc">Registration, insurance, MOT renewals. Never get caught off-guard by an expired document.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-emoji">👥</div>
+      <h3 class="feat-title">Three roles, one app</h3>
+      <p class="feat-desc">Manager, supervisor, mechanic — each sees what they need. Email login for everyone, no shared passwords.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-emoji">📊</div>
+      <h3 class="feat-title">Cost dashboard</h3>
+      <p class="feat-desc">Per-vehicle, per-month, per-vendor cost breakdown. Know what each truck actually costs you.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-emoji">🔐</div>
+      <h3 class="feat-title">Multi-tenant secure</h3>
+      <p class="feat-desc">Your fleet data is isolated. Real row-level security. Each team can only see their own fleet.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-emoji">📤</div>
+      <h3 class="feat-title">Your data is yours</h3>
+      <p class="feat-desc">Export everything to Excel any time. No lock-in. If you leave, you take all your history with you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="section-head">
+    <div class="section-eyebrow">Questions</div>
+    <h2 class="section-title">Honest <em>answers</em>.</h2>
+  </div>
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <h3 class="faq-q">What's the catch with 3 months free?</h3>
+      <p class="faq-a">No catch. We're early stage and learning from our first customers. Free access in exchange for honest feedback. You can walk away at any point with all your data, no questions asked.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-q">What happens after 3 months?</h3>
+      <p class="faq-a">We talk pricing together based on your fleet size and what you actually used. Our goal is a price that's a small fraction of what one missed repair costs you. If we can't agree on a fair number, you keep your data and there's no obligation.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-q">How big is your team?</h3>
+      <p class="faq-a">Small and local to the UAE. That's the whole point — when you message us about a problem, you reach the people who built the product, not a support queue.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-q">Do you work with very small fleets (under 10 vehicles)?</h3>
+      <p class="faq-a">Yes. That's actually who Waei is built for. Most fleet software has a high minimum that locks out fleets under 50 vehicles. We're the opposite.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-q">Does it work in Arabic?</h3>
+      <p class="faq-a">The interface is currently English, but our invoice scanning understands Arabic invoices end-to-end. Arabic UI is on the roadmap and pilot customers help us prioritize it.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-q">Where is my data stored?</h3>
+      <p class="faq-a">On Supabase infrastructure (EU region by default). Encrypted in transit and at rest. We can discuss specific data residency requirements during onboarding.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-q">Can I see the product before committing to a call?</h3>
+      <p class="faq-a">Yes — click "Try the app" to see the live product. You can poke around the login flow. For real data and a tour, the 30-minute call is much more useful.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="cta-section">
+  <h2 class="cta-title">Ready to <em>start</em>?</h2>
+  <p class="cta-sub">One email, one call, and you're set up. Three months to decide if Waei is worth paying for.</p>
+  <div class="cta-row">
+    <a href="mailto:hello@waei.ae?subject=Waei%20Fleet%20%E2%80%94%20Pilot%20request&body=Hi%20Waei%20team%2C%0A%0AI%27d%20like%20to%20join%20the%20pilot%20program.%20Here%27s%20about%20our%20fleet%3A%0A%0AFleet%20size%20(approx.%20number%20of%20vehicles)%3A%20%0AType%20of%20vehicles%20(trucks%2C%20vans%2C%20cars)%3A%20%0AContact%20name%3A%20%0AContact%20phone%3A%20%0A%0AThanks!" class="btn btn-primary" style="min-width:220px">Email hello@waei.ae →</a>
+    <a href="https://app.waei.ae" class="btn btn-secondary" style="min-width:160px">Try the app</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <a href="/">Home</a>
+  <a href="/pricing.html">Pricing</a>
+  <a href="https://app.waei.ae">Customer login</a>
+  <a href="mailto:hello@waei.ae">hello@waei.ae</a>
+  <div class="footer-copy">Waei.ae · © 2026</div>
+</footer>
+
+</body>
+</html>
